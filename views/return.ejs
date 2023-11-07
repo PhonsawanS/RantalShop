@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>หน้าคืนสินค้า</title>
+  <style>
+    form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;  
+    }
+
+    label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    }
+
+    .content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 37%;
+        height: 400px;
+        width: 300px;
+        color: azure;
+        border-radius: 50px;
+        box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.3);
+        background-color: #243B55;
+        
+    }
+
+    header{
+        position: relative;
+        display: flex;
+        margin-left: 41%;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>หน้าคืนสินค้า</h1>
+  </header>
+
+  <div class="content">
+    <form id="returnForm" style="margin-left: 20%;">
+      <label for="orderNo">เลขที่การเช่า:</label>
+      <input type="text" id="orderNo" name="orderNo"><br><br>
+
+      <label for="product">รหัสสินค้า:</label>
+      <input type="text" id="product" name="product"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="enail" name="email"><br><br>
+
+      <button type="submit" style="margin-left: 15%;">ส่งแบบฟอร์ม</button>
+    </form>
+  </div>
+
+ 
+
+  <script src="script.js"></script>
+
+</body>
+</html>

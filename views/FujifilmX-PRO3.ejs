@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    
+    <style>
+        .product-image {
+            max-width: 50px;
+            height: auto;
+        }
+        .row1{
+            background-color: #f3f4f5;
+        }
+        button{
+            width: 150px;
+        }
+        /* ใช้การจัดหน้าให้อยู่ตรงกลางในคอลัมน์ */
+        
+        /* เพิ่มระยะห่างด้านบนและด้านล่างของข้อความ */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        .product-image {
+            max-width: 50px;
+            height: auto;
+        }
+        .row1{
+            box-shadow: 5px 5px 100px rgba(0, 0, 0, 0.3);
+            width: 800px;
+            height: 550px;
+            display: flex;
+            border-radius:50px;
+            background-color: white;
+            margin: 0; 
+            min-width: 150px;
+            position: absolute;   
+            top: 50%;  
+            left: 50%;   
+            -ms-transform: translate(-50%, -50%);  
+            transform: translate(-50%, -50%)
+    
+        }
+
+        button {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            background-color: #FF9130;
+            color: #f3f4f5;
+            border: none;
+            border-radius: 50px;
+            width: 150px;
+            height: 40px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        
+            min-width: 150px; /* Minimum width for the button */
+        }
+
+
+        .start-date{
+            
+            border-radius: 50px;
+        }
+
+        .con-left {
+            margin-right: 30px;
+            color: #141E30;
+            position: relative;
+            flex: 2;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            min-width: 300px; /* Minimum width for con-left */
+        }
+
+        .con-right {
+            background-color: #243B55;
+            border-radius: 50px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex: 1;
+            color: #f3f4f5;
+            width: 60px;
+            height: auto;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            min-width: 200px; /* Minimum width for con-right */
+        }
+
+
+        .con-right h3{
+            margin: 30px;
+        
+        }
+
+        .con-right h2{
+            font-size: 2rem;
+            margin: 30px;
+
+        }
+
+        .start-date{
+            margin: 30%;
+        }
+
+        .mb-3{
+            margin-left: 30px;
+        }
+
+        .calcu{
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .calcu .con-btn2 {
+            margin-left: 20px;
+            display: none;
+            
+        }
+        .btn-con1{
+            margin-left: 50px;
+            
+        }
+
+        
+
+          input{
+            border-radius: 50px;
+          }
+        
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .con-left {
+                min-width: 100px; /* Adjust the minimum width for smaller screens */
+            }
+
+            .con-right {
+                min-width: 100px; /* Adjust the minimum width for smaller screens */
+            }
+        }
+
+        .btn-con2{
+            margin-top: 20px;
+            margin-left: 10%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-evenly">
+        <div class="row1">
+            <div class="con-left">
+                <div class="col-md-6" style="margin-left: 20px;">
+                    <img src="/images/product/fuji/fuji1.png" alt="" class="product-image" style="max-width: 50%; height: auto; margin-left: 35%;">
+                </div>
+                <div class="col-md-6" style="margin-left: 20px;">
+                    <h2 style="margin-left: 15%;">รายละเอียดผลิตภัณฑ์</h2>
+                    <p style="margin-left: 15%;">
+                        Fujifilm X-Pro3 เป็นกล้องที่เน้นคุณภาพภาพสูงและมีการออกแบบที่คลาสสิค เป็นที่โปรดปรานในวงการถ่ายภาพแบบ rangefinder-style และเหมาะสำหรับนักถ่ายภาพที่ต้องการความแม่นยำและสไตล์แบบพื้นที่แต่งงานหรือถ่ายภาพแม่นยำในสถานการณ์ต่างๆ
+                    </p>
+                </div>
+            </div>
+            <div class="con-right">
+                <form id="rentalForm" action="/history"  method="POST" novalidate>
+                    <h3>Fujifilm X-PRO3</h3>
+                    <h2 style="max-width: 60%; height: auto;" >ราคา 900</h2>
+                    <input type="hidden" id="rentalPrice" name="rentalPrice" value="900" required>
+                    <div id="date-se">
+                        <div class="mb-3">
+                            <label for="startDate">วันที่จอง</label>
+                            <input type="date" id="startDate" name="startDate" class="form-control">
+                        </div>
+                        <br>
+                        <div class="mb-3">
+                            <label for="endDate">วันที่คืน</label>
+                            <input type="date" id="endDate" name="endDate" class="form-control" style="margin-left: 7px;">
+                        </div>
+                        <br>
+                        <button type="button" class="btn-con1" id="calculate-btn">จอง</button>
+                    </div>
+                    <div class="calcu">
+                        <p id="reservation-cost"></p>
+                        <p id="reservation2-cost"></p>
+                        <p id="rent-duration"></p>
+                        <p id="total-cost"></p>
+                        <input type="email" id="email" name="email" placeholder="อีเมล" required>
+                        <input type="hidden" id="productID" name="productID" value="13" required>
+                        <button type="submit" id="rent-button" style="margin-left: 20px;">เช่า</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#calculate-btn').click(function() {
+            var startDate = new Date($('#startDate').val());
+            var endDate = new Date($('#endDate').val());
+            var today = new Date();
+            
+            if (today.getDay > startDate.getDay) {
+                alert('วันที่ยืมห้ามน้อยกว่าวันที่ปัจจุบัน');
+            } else if (endDate < startDate) {
+                alert('วันที่คืนห้ามน้อยกว่าวันที่จอง');
+            } else {
+                var timeDiff = Math.abs(endDate.getTime() - startDate.getTime() + 1);
+                var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                var reservationCost = diffDays * rentalPrice.value;
+
+                $('#reservation-cost').text('ค่าจอง: ' + reservationCost + ' บาท(ยังไม่หักมัดจำ)');
+                $('#reservation2-cost').text('ค่ามัดจำ 50%: ' + (reservationCost / 2) + ' บาท');
+                $('#rent-duration').text('ระยะเวลาที่ยืม: ' + diffDays + ' วัน');
+                $('#total-cost').text('ค่าเช่าทั้งหมด: ' + reservationCost + ' บาท');
+            }
+        });
+    </script>
+</body>
+</html>

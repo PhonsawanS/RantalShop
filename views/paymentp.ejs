@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Open Sans", Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 15px;
+            display: flex;
+          }
+          a {
+            text-decoration: none;
+          }
+          .wrapper {
+            width: 95%;
+            max-width: 1200px;
+            margin: 30px auto;
+          }
+          .pricing-table h2 {
+            font-size: 1.5em;
+            padding: 35px 10px;
+            margin: 0;
+          }
+          .description {
+            margin-top: 20px;
+            font-size: 0.85em;
+            padding: 0 40px;
+            font-style: italic;
+          }
+          
+          .description {
+            margin-top: 20px;
+            font-size: 0.85em;
+            padding: 0 40px;
+            font-style: italic;
+          }
+          .price,
+          .pricing-box {
+            -webkit-transition: all ease-out 0.2s;
+            transition: all ease-out 0.2s;
+          }
+          .price {
+            background: rgb(98, 100, 250);
+            color: #000000;
+            font-size: 2em;
+            font-weight: 600;
+            position: relative;
+            padding: 20px 10px;
+            display: block;
+          }
+          .pricing-box:nth-child(2) .price {
+            background: #216f99;
+          }
+          .pricing-box:nth-child(3) .price {
+            background: gray;
+          }
+          .pricing-box:hover .price {
+            background: rgb(99, 2, 255);
+            box-shadow: inset 0 0 100px 0 rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+          }
+          .btn {
+            background: rgb(98, 100, 250);
+            border: 1px solid #d9d909;
+            color: #000;
+            -webkit-transition: all ease-out 0.2s;
+            transition: all ease-out 0.2s;
+            border-radius: 30px;
+            padding: 7px 40px;
+            display: inline-block;
+            margin-top: 20px;
+          }
+          .btn:hover {
+            background: rgb(99, 2, 255);
+            border: 1px solid #feffff;
+            color: #fff !important;
+          }
+          .pricing-table-divider {
+            display: block;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.08);
+            max-width: 80%;
+            margin: 20px auto 0;
+          }
+          .pricing-table {
+            border-radius: 3px;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: (1fr)3;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            text-align: center;
+          }
+          
+          .pricing-box {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.13);
+            border: 2px solid rgba(10, 123, 183, 0.14);
+          }
+          .pricing-box:hover {
+            -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+          }
+          .pricing-table ul li {
+            padding: 3px 0;
+            font-size: 0.95em;
+          }
+          .pricing-table ul {
+            color: #000;
+            padding: 15px 60px;
+            text-align: left;
+          }
+          @media (max-width: 750px) {
+            .pricing-table {
+              -ms-grid-columns: 1fr;
+              grid-template-columns: 1fr;
+            }
+            .pricing-table > div:nth-child(3) {
+
+              grid-row-start: 1;
+            }
+            .pricing-table > div:nth-child(2) {
+
+              grid-row-start: 2;
+            }
+            .pricing-table > div {
+              -ms-flex-item-align: top;
+              -ms-grid-row-align: top;
+              align-self: top;
+            }
+          }
+          .pricing-table{
+            margin-left:400px;
+            width: 100%;
+          }  
+
+          button{
+            color: #feffff;
+            background: rgb(98, 100, 250) ;
+            border: none;
+            border-radius: 20px;
+            display: flex;
+            flex: 1;
+            margin-top: 10px;
+            margin-left: 150px;
+          }
+          input{
+            border-radius: 50px;
+          }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2></h2><br/>
+        <div class="pricing-table">
+          <div class="pricing-box">
+            <h2>Patinum</h2>
+            <span class="price">500 baht/month</span>
+            <p class="description">โปรดใส่ E-MAIL ที่คุณต้องการสมัคร</p>
+            <form action="/users" method="POST">
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email">
+              <label for="level"></label>
+              <input type="hidden" name="level" value="platinum" id="level">
+              <button type="submit">Sign up</button>
+            </form>
+            <ul>
+              <li>สิ้นค้ามีให้เช่ามากขึ้น 3 รุ่น</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+    <script>
+   
+    </script>
+            
+</body>
+</html>

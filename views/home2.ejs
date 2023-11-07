@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      *{
+        font-family: montserrat;
+    }
+    /* font category */
+    @font-face{
+        font-family: myfont;
+        src: url(/images/College\ Block\ 2.0\ D.otf);
+    }
+    h1{
+        font-family: myfont;
+    }
+    /* end categoty */
+    
+    body{
+        background: f1fbff;
+    }
+    .section-padding{
+        padding: 100px 0;
+    }
+    .carousel-item{
+        height: 100vh;
+        min-height: 300px;
+    }
+    .carousel-caption{
+        bottom: 220px;
+        z-index: 2;
+    }
+    .carousel-caption h5{
+        font-size: 45px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+    }
+    .carousel-caption p{
+        width: 60%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+    /* ทำแสงในรูปให้มืดลง */
+    .carousel-inner::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    .navbar-nav a{
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    /* logo */
+    .navbar-light .navbar-brand{
+        color: #000;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    .navbar-light .navbar-brand:focus,
+    .navbar-light .navbar-brand:hover{
+        color: #000;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: #000;
+    }
+    .w-100{
+        height: 100vh;
+    }
+    .aboutus{
+        font-family: Monospace;
+    }
+    
+    
+    /*==responsive==*/
+    @media only screen and (min-width: 768px) and (max-width:991px) {
+        .carousel-caption{
+            bottom: 370px;
+        }
+        .carousel-caption p{
+            width:100% ;
+        }
+    }
+    @media only screen and (max-width:767px) {
+        .navbar-nav{
+            text-align: center;
+        }
+        .carousel-caption{
+            bottom: 125px;
+        }
+        .carousel-caption h5{
+            font-size: 17px;
+        }
+        .carousel-caption a{
+            padding: 10px 15px;
+        }
+        .carousel-caption p{
+            width: 100%;
+            line-height: 1.6;
+            font-size: 12px;
+        }
+    }
+    
+    
+    /* Our services */
+    #services {
+        background-color: #333; /* สีดำอ่อน ตามความเข้มที่คุณต้องการ */
+        color: #fff; /* เปลี่ยนสีตัวอักษรเป็นสีขาวหรือสีที่คุณต้องการ */
+        padding: 50px 0; /* ปรับขนาดขอบของเนื้อหาเพื่อให้เหมาะสม */
+    }
+    
+    /* shop */
+    .container {
+        text-align: center;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .column {
+        margin: 10px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* membershrip */
+    .member{
+        font-family: Monospace;
+    }
+    .member-per{
+        font-family: Monospace;
+    }
+    .membership-item {
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+    }
+      
+    .membership-item h2 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+      
+    .membership-item p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+      
+    #membership {
+        background-color: #f2f2f2; /* เปลี่ยนสีพื้นหลังตามที่คุณต้องการ */
+        margin-bottom: 20px;
+    }
+      
+    .row {
+        justify-content: space-between;
+    }
+     
+    
+    /* member Logo*/
+    .membership-item.silver {
+        background-color: #E0E0E0; /*  "Free" */
+        height: 100%;
+      }
+      
+    .membership-item.gold {
+        background-color: #E0E0E0; /*  "Gold" */
+        height: 100%;
+      }
+      
+    .membership-item.platinum {
+        background-color: #E0E0E0; /*  "Platinum" */
+        height: 100%;
+      }
+    .membership-item .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    .membership-item {
+        text-align: center;
+      }
+    .membership-item img {
+        width: 50%; /* ปรับขนาดรูปตามที่คุณต้องการ */
+        height: auto;
+     }
+    .membership-button{
+        height: 100%;
+    }
+      
+    /* footer */
+    #footer .fusion-copyright-notice {
+        font-size: 14px; /* ปรับขนาดตัวอักษร */
+      }
+      
+      #footer .fusion-copyright-notice a {
+        color: gray; /* เปลี่ยนสีของลิงก์เป็นสีเทา */
+      }
+      
+    #footer {
+        text-align: center; /* จัดตำแหน่งตรงกลาง */
+        color: gray; /* เปลี่ยนสีเทา */
+      }
+      
+    .fusion-footer-copyright-area {
+        --copyright_padding-top: 18px;
+        --copyright_padding-bottom: 16px;
+        --copyright_bg_color: #4b4c4d;
+        --copyright_border_size: 0px;
+        --copyright_border_color: #4b4c4d;
+        --copyright_link_color_hover: #ff8c00;
+    }
+    .fusion-footer-copyright-area {
+        z-index: 10;
+        position: relative;
+        padding: 18px 10px 16px;
+        border-top: 0px solid #4b4c4d;
+        background-color: #4b4c4d;
+    }
+    .fusion-footer {
+        --footer_area_padding-top: 43px;
+        --footer_area_padding-bottom: 40px;
+        --footer_area_padding-left: 0px;
+        --footer_area_padding-right: 0px;
+        --footer_divider_line-flex: block;
+        --footer_divider_line_size: 1px;
+        --footer_divider_line_style: solid;
+        --footer_widgets_padding: 16px;
+    }
+    
+    </style>
+</head>
+<body>         
+        <!-- nav bar -->
+   <!-- Navigation bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/home"><span class="text-warning">Rental</span>Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <!-- Pricing dropdown -->
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="pricingDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Category
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="pricingDropdown">
+                        <a class="dropdown-item" href="/canon">Canon</a>
+                        <a class="dropdown-item" href="/nikon">Nikon</a>
+                        <a class="dropdown-item" href="/sony">Sony</a>
+                        <a class="dropdown-item" href="/leica">Leica</a>
+                        <a class="dropdown-item" href="/fujifilm">Fujifilm</a>
+                        <a class="dropdown-item" href="/olympus">Olympus</a>
+  
+                    </div>
+                </div>
+                <!-- End Pricing dropdown -->
+                <a class="nav-link" href="/return">Return</a>
+                <a class="nav-link" href="/aboutus">About Us</a>
+                <a class="nav-link" href="/contactus">Contact</a>
+                <a class="btn btn-danger" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+  </nav>
+  
+      <!-- Slide -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/h1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+
+              <h5>cannon</h5>
+              <p>You dream cannon</p>
+              <p><a href="/canon" class="btn btn-warning mt-3">Learn more</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/h2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+
+              <h3>LEICA</h3>
+              <p>You dream leica</p>
+              <p><a href="leica" class="btn btn-warning mt-3">Learn more</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/h3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+
+              <h5>SONY</h5>
+              <p>You dream SONY</p>
+              <p><a href="sony" class="btn btn-warning mt-3">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- section -->
+      <section id="about" class="about section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12 mt-5" >
+              <div class="about-img">
+                <img src="images/logo.jpg" alt="" class="img-fluid ">
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+              <div class="about-text">
+                <h2 class="aboutus">About us</h2>
+                <p>RentalShop - ร้านที่คุณสามารถค้นพบโลกของการเช่าสินค้าที่คุณต้องการ ที่นี่คุณสามารถเช่ากล้อง และเลนส์ DSLR, Mirrorless, และ GoPro ได้อย่างง่ายดายและคุ้มค่า มิตรภาพ ความรับผิดชอบ และคุณภาพสูงคือคุณสมบัติของเรา!</p>
+                <a href="aboutus" class="btn btn-warning">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>    
+
+      <!-- services section -->
+ <section id="services" class="services section-padding">
+        <div class="container">
+          <!-- ourservices -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-header text-center pb-5">
+                <h1 class="Category">Category</h1>
+                <p>ร้าน <span class="text-warning">RentalShop</span> ให้เช่ากล้อง เช่าเลนส์ Cannon, Nikon, Sony........</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- shop1 -->
+          <div class="row">
+            <div class="col" style="margin-right: 10px;">
+                <a href="/canon"><img src="/images/cannon.png" alt="" ></a>
+            </div>
+            <div class="col" style="margin-right: 10px;">
+                <a href="/nikon"><img src="/images/Nikon.png" alt=""></a>
+            </div>
+            <div class="col">
+                <a href="/sony"><img src="/images/Sony.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- shop2 -->
+          <div class="row" style="margin-top: 6%;">
+            <div class="col" style="margin-right: 10px;">
+                <a href="/leica"><img src="/images/Leica.png" alt=""></a>
+            </div>
+          
+        </div>
+        
+</section>
+
+
+<!-- membershrip -->
+<section id="membership" class="services section-padding">
+  <div class="container">
+    <!-- หัวข้อ -->
+    <h3 class="member text-center" style="margin-top: 0;">MemberShip</h3>
+    <p class="member-per text-center">เรียนทุกท่านที่ต้องการเช่าสินค้าของเราอย่างบ่อย ๆ และอยากประหยัดเงิน! เราขอเสนอโปรแกรมสมาชิกที่น่าตื่นเต้นสำหรับคุณ. เมื่อคุณเข้าร่วมเป็นสมาชิกของเรา, คุณจะได้รับสิทธิพิเศษในการเช่าสินค้าของเราในราคาที่ลดลงทุกครั้งที่คุณใช้บริการ</p>
+
+    <div class="row">
+
+<!-- silver -->
+      <div class="col">
+        <div class="membership-button">
+          <div class="membership-item silver d-flex flex-column align-items-center">
+            <img src="/images/silver.png" alt="">
+            <P class="mt-3">ราคา100</P>
+            <a href="/payments" class="btn btn-danger mt-3">Buy</a>
+          </div>
+        </div>
+      </div>
+      
+<!-- Gold -->
+<div class="col">
+  <div class="membership-button">
+    <div class="membership-item gold d-flex flex-column align-items-center">
+      <img src="/images/gold.png" alt="">
+      <P class="mt-3">ราคา250</P>
+      <a href="/paymentg" class="btn btn-danger mt-3">Buy</a>
+    </div>
+  </div>
+</div>
+
+<!-- Platinum -->
+<div class="col">
+  <div class="membership-button">
+    <div class="membership-item platinum d-flex flex-column align-items-center">
+      <img src="/images/patinum.png" alt="">
+      <P class="mt-3">ราคา500</P>
+      <a href="/paymentp" class="btn btn-danger mt-3">Buy</a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- footer -->
+<footer id="footer" class="fusion-footer-copyright-area fusion-footer-copyright-center">
+  <div class="fusion-row">
+    <div class="fusion-copyright-content">
+    
+      <div class="fusion-copyright-notice" style="padding-bottom: 0px;">
+      <div>Copyright 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>-2023 <a href="/home.html">RentalShop</a> | All Rights Reserved | Powered by ....	</div>
+      </div>
+    <div class="fusion-social-links-footer" style="display: none;"></div>
+   </div> <!-- fusion-fusion-copyright-content -->
+  </div> <!-- fusion-row -->
+</footer>
+        
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

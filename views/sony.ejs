@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #000000;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: orange;
+        }
+
+        /* Gray Background Div Styles */
+        .gray-div {
+            background-color: #f8f9fa;
+            padding: 30px;
+            margin-top: 70px;
+        }
+
+        /* Logo Styles */
+        .logo {
+            max-width: 200px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+        }
+
+        /* Text Styles */
+        .leica-text {
+            font-size: 24px;
+        }
+
+        /* Product Cards Styles */
+        .product-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+           /* โครงสร้าง Product Card */
+    .product-card {
+      display: inline-block;
+      width: calc(33.33% - 40px); /* 33.33% คือ 1/3 ของความกว้างของแท็ก <body> */
+      margin: 20px;
+      padding: 10px;
+      vertical-align: top;
+  }
+
+  /* ลดระยะห่างระหว่าง Product Cards */
+  .product-card + .product-card {
+      margin-left: 20px;
+  }
+
+  /* สไตล์เพิ่มเติมตามที่คุณต้องการ */
+  .product-card img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .product-card h3 {
+      font-size: 18px;
+  }
+
+  .product-card p {
+      font-size: 14px;
+  }
+    /* โครงสร้าง Product Card */
+    .product-card {
+      display: inline-block;
+      width: calc(33.33% - 40px); /* 33.33% คือ 1/3 ของความกว้างของแท็ก <body> */
+      margin: 20px;
+      padding: 10px;
+      vertical-align: top;
+  }
+
+  /* ลดระยะห่างระหว่าง Product Cards */
+  .product-card + .product-card {
+      margin-left: 20px;
+  }
+
+  /* ลดขนาดรูปภาพ */
+  .product-card img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  /* สไตล์เพิ่มเติมตามที่คุณต้องการ */
+  .product-card h3 {
+      font-size: 18px;
+  }
+
+  .product-card p {
+      font-size: 14px;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#"><span class="text-warning">Rental</span>Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" aria-current="page" href="/home">Home</a>
+
+                    <!-- Dropdown menu -->
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                            <a class="dropdown-item" href="/canon">Canon</a>
+                            <a class="dropdown-item" href="/nikon">Nikon</a>
+                            <a class="dropdown-item" href="/sony">Sony</a>
+                            <a class="dropdown-item" href="/leica">Leica</a>
+                            <a class="dropdown-item" href="/fujifilm">Fujifilm</a>
+                            <a class="dropdown-item" href="/olympus">Olympus</a>
+                        </div>
+                    </div>
+                    <a class="nav-link" href="/return">Return</a>
+                    <a class="nav-link" href="/aboutus">About Us</a>
+                    <a class="nav-link" href="/contactus">Contact</a>
+                    <a class="btn btn-danger" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="gray-div">
+        <img src="/images/Sonylogo.jpg" alt="Sony Logo" class="logo">
+        <div class="leica-text">ให้เช่ากล้อง เช่าเลนส์ Sony Mirrorless</div>
+    </div>
+
+    <!-- แถว1 -->
+    <div class="container">
+      <div class="row">
+        <div class="product-card text-center" style="background-color: #f3f4f5;">
+            <a href="/sonyA9"> <!-- ระบุ URL ของหน้า "sonyA9.ejs" ใน href -->
+                <img src="/images/product/sony/sony1.png" alt="Product Image">
+            </a>
+            <h3>Sony A9 Body</h3>
+            <p>ค่าเช่า 1,500 บาท/วัน</p>
+          
+        </div>
+    
+        <div class="product-card text-center" style="background-color: #f3f4f5;">
+            <a href="/SonyZV-E1"> <!-- ระบุ URL ของหน้า "sonyA9.ejs" ใน href -->
+                <img src="/images/product/sony/sony2.png" alt="Product Image">
+            </a>
+          <h3>Sony ZV-E1 Body</h3>
+          <p>ค่าเช่า 1,300 บาท/วัน</p>
+        </div>
+    
+        <div class="product-card text-center" style="background-color: #f3f4f5;">
+            <a href="/SonyFE16"> <!-- ระบุ URL ของหน้า "sonyA9.ejs" ใน href -->
+                <img src="/images/product/sony/sony3.png" alt="Product Image">
+            </a>
+          <h3>Sony FE 16-35mm f/2.8 GM</h3>
+          <p>ค่าเช่า 800 บาท/วัน</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more product cards as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
